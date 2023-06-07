@@ -6,3 +6,4 @@ if(amount < 10){
     }
 
     console.log(`hey it's my first node app!!!`);
+    require('./mind-grenade.js');
