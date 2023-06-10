@@ -1,1 +1,2 @@
-hello
+hello this is the first.txt file contents
+try changing the directory to check for errors

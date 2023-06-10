@@ -1,0 +1,3 @@
+htis is the .txt file using the write file function: hello this is the first.txt file contents
+try changing the directory to check for errors
+ hello2 this is second.txt
