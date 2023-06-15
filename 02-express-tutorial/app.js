@@ -1,26 +1,33 @@
-const express  = require('express');
-const app  = express()
+const express = require('express');
+const app = express();
+const path = require('path');
 
-app.get('/',(req,res)=>{
-    res.status(200).send('home page')
-})
-app.get('/about',(req,res)=>{
-res.status(200).send('about')
-})
 
+
+//SETUP STATIC AND MIDDLEWARE
+app.use(express.static('./public'))
+
+
+
+
+
+
+// app.get('/',(req,res)=>{
+// res.sendFile(path.resolve(__dirname,'./navbar-app/index.html'))
+// // now what we had to do earlier was to import all the style sheets, images and js files individually but in express that can be done 
+// // in one step using  app.use(express.static ('./public')
+// })
 app.all('*',(req,res)=>{
-    // res.send('<h1>$)$ error</h1>')
-    res.status(404).send('<h1>page 404 not found</h1>')
+    res.status().write('<h1>404 NOT FOUND</h1>')
+    res.send()
 })
+
+
+
+
+
+
 
 app.listen(5000,()=>{
-    console.log('server is running on port 5000')
+    console.log('server is listening on port 5000')
 })
-
-//app.get
-//app.post
-//app.put
-//app.delete
-//app.all
-//app.use
-//app.listen
